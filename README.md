@@ -25,4 +25,12 @@ produces something like the image below.
 (The recording is from mobile setting with a rather unconventional
 electrode placment, hence the noisiness and a bit weird ECG waveform.)
 
+Also note that despite the name, the algorithm doesn't actually detect
+the R-peaks themselves. Rather the detected time is better described as
+"midpoint of the QRS complex". Further the implementation may cause an artificial
+shifting of a few (1-2) samples due to not compensating the signal shifting during
+taking differences. If you need/want to detect the exact R-peak,
+it's quite straightforward to find by locating the maximum signal value
+in a small (some milliseconds) window around the detected position.
+
 ![Detection result example](https://raw.github.com/tru-hy/rpeakdetect/gh-pages/rpeakdetect_sample.png)
