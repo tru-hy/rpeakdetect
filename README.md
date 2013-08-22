@@ -20,4 +20,7 @@ With added argument `plot` plots the detection.
 
     python2 rpeakdetect.py 128 < ecg_data.csv
 
+Running this with some [sample data](https://raw.github.com/tru-hy/rpeakdetect/gh-pages/ecg_sample.csv)
+produces something like this:
 
+![Detection result example](https://raw.github.com/tru-hy/rpeakdetect/gh-pages/rpeakdetect_sample.png)
