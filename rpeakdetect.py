@@ -63,7 +63,6 @@ def detect_beats(
 		thresholds.append(0.5*np.std(d))
 		max_powers.append(np.max(d))
 
-	threshold = 0.5*np.std(decg_power)
 	threshold = np.median(thresholds)
 	max_power = np.median(max_powers)
 	decg_power[decg_power < threshold] = 0
