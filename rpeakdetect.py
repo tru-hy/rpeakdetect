@@ -57,7 +57,7 @@ def detect_beats(
 	# Robust threshold and normalizator estimation
 	thresholds = []
 	max_powers = []
-	for i in range(len(decg_power)/ransac_window_size):
+	for i in range(int(len(decg_power)/ransac_window_size)):
 		sample = slice(i*ransac_window_size, (i+1)*ransac_window_size)
 		d = decg_power[sample]
 		thresholds.append(0.5*np.std(d))
